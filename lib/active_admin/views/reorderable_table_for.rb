@@ -4,7 +4,7 @@ module ActiveAdmin
       builder_method :reorderable_table_for
 
       def build(collection, options = {}, &block)
-        options[:class] = [options[:class], 'aa-reorderable'].compact.join(' ')
+        options[:class] = [options[:class], 'aa-reorderable index_table index'].compact.join(' ')
 
         super(collection, options) do
           reorder_column
